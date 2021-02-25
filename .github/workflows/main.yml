@@ -40,6 +40,7 @@ jobs:
           echo Creating Folders
           mkdir bin
           mkdir lib
+          curl https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar -o lib/junit-jupiter-engine-5.5.2.jar
           curl https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.5.2/junit-platform-console-standalone-1.5.2.jar -o lib/junit-platform-console-standalone-1.5.2.jar
           javac -d bin/ src/Calculator.java
           javac -d bin -cp bin:lib/junit-platform-console-standalone1.5.2.jar test/*
